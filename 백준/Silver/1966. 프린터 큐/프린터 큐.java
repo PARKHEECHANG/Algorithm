@@ -23,7 +23,7 @@ public class Main {
             st = new StringTokenizer(br.readLine());
             for(int j=0; j<n; j++) {
                 int priority = Integer.parseInt(st.nextToken());
-                printer.add(new Document(j, priority));
+                printer.add(new Document(j, priority)); // ★_★
             }
 
             int cnt = 1; // 몇 번째로 인쇄될까?
