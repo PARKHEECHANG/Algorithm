@@ -34,5 +34,6 @@
 
 ---
 
-![예제 입력2 예시](https://user-images.githubusercontent.com/122577719/212501863-118e50ae-6f57-4e27-8508-481856b425dc.png){: width="80%" height="80%"}
+### 예제 입력2 
+![예제 입력2 예시](https://user-images.githubusercontent.com/122577719/212501863-118e50ae-6f57-4e27-8508-481856b425dc.png)
 
