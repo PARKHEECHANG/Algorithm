@@ -19,12 +19,10 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int n = Integer.parseInt(st.nextToken()); // 문서의 개수는 n개
             int m = Integer.parseInt(st.nextToken()); // 궁금한 문서는 m번
-            int orgin_printer[] = new int[n]; // 초기 프린터 상태
 
             st = new StringTokenizer(br.readLine());
             for(int j=0; j<n; j++) {
                 int priority = Integer.parseInt(st.nextToken());
-                orgin_printer[j] = priority;
                 printer.add(new Document(j, priority));
             }
 
