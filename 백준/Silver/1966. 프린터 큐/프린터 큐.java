@@ -44,7 +44,7 @@ public class Main {
                 if(isImportant == false) { // 중요하지 않으면
                     printer.add(doc); // 뒤로 보내기
                 } else if (isImportant == true) { // 중요하면서
-                    if(doc.doc_num==m) { // 문서 번호도 같으면
+                    if(doc.doc_num==m) { // 내가 찾던 문서 번호라면
                         sb.append(cnt+"\n"); // 출력
                     } else {
                         cnt++;
