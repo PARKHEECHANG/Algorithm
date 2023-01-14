@@ -45,7 +45,7 @@ public class Main {
                 } else if (isImportant == true) { // 중요하면서
                     if(doc.doc_num==m) { // 내가 찾던 문서 번호라면
                         sb.append(cnt+"\n"); // 출력
-                    } else {
+                    } else { // 인쇄(poll)는 이미 되었으니 카운트만 해주자
                         cnt++;
                     }
                 }
