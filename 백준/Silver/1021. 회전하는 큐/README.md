@@ -32,3 +32,6 @@
 
  <p>첫째 줄에 문제의 정답을 출력한다.</p>
 
+---
+
+![예제 입력2 예시](C:\Users\PARKHEECHANG\Pictures\회전하는 큐 예시.PNG)
