@@ -8,6 +8,8 @@ public class Main {
 	static boolean visited[][];
 	static int arr[][];
 	static int need_worm;
+	static int size_x;
+	static int size_y;
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -20,8 +22,8 @@ public class Main {
 			
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			
-			int size_x = Integer.parseInt(st.nextToken());
-			int size_y = Integer.parseInt(st.nextToken());
+			size_x = Integer.parseInt(st.nextToken());
+			size_y = Integer.parseInt(st.nextToken());
 			int cabbage_cnt = Integer.parseInt(st.nextToken());
 			
 			arr = new int[size_y+1][size_x+1]; 
@@ -39,7 +41,7 @@ public class Main {
 				for(int x=0; x<size_x; x++) {
 					if(arr[y][x] == 1 && !visited[y][x]) {
 						need_worm ++;
-						dfs(y,x, size_x, size_y);
+						dfs(y,x);
 					}
 				}
 			}
@@ -50,7 +52,7 @@ public class Main {
 		System.out.print(sb);	
 	}
 	
-	public static void dfs(int y, int x, int size_x, int size_y) {
+	public static void dfs(int y, int x) {
 		
 		if(arr[y][x] == 1 && !visited[y][x]) {
 			visited[y][x] = true;
@@ -60,13 +62,12 @@ public class Main {
 			int left = x-1;
 			int right = x+1;
 			
-			if(up>=0) { dfs(up, x, size_x, size_y); }
-			if(down<=size_y) { dfs(down, x, size_x, size_y);  }
-			if(left>=0) { dfs(y, left, size_x, size_y); }
-			if(right<=size_x) { dfs(y, right, size_x, size_y); }
+			if(up>=0) { dfs(up, x); }
+			if(down<=size_y) { dfs(down, x);  }
+			if(left>=0) { dfs(y, left); }
+			if(right<=size_x) { dfs(y, right); }
 			
 		}
 	} // dfs
 	
 }
-	
