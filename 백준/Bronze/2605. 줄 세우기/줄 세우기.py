@@ -12,14 +12,13 @@ def shift(now) :
 students[1] = 1 # 무조건 0번을 받는다.
 
 # 그 다음 학생
-# 뽑은 번호의 인덱스 + 1 == 학생 번호가 되는 것을 이해해야 함.
-for idx in range(1, n) : # 두번째~끝
-    students[idx + 1] = idx + 1 # 일단 줄 세우기
+for idx in range(1, n) :
+    now = idx + 1  # 뽑은 번호의 인덱스 + 1 == 학생 번호가 되는 것을 이해해야 함.
+    students[now] = now # 일단 줄 세우기
     num = num_lst[idx] # 뽑은 번호
     if num == 0 : # 뽑은 번호가 0이면 바꾸지 않고 그대로 줄 서면 된다.
         continue
     elif num > 0 : # 뽑은 번호가 1이상이면, 그만큼 앞으로 가야해요.
-        now = idx+1
         for i in range(num) : # 뽑은 번호 만큼
             shift(now) # 앞사람과 교체
             now -= 1 # 교체 후 now의 위치는 그만큼 당겨짐.
