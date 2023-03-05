@@ -8,9 +8,8 @@ for i in range(p, p+k) :
 
 mx = sm
 for i in range(n-k) :
-    sm -= lst[p]
-    sm += lst[p+k]
-    p += 1
+    sm -= lst[i]
+    sm += lst[i+k]
 
     mx = max(sm, mx)
 
